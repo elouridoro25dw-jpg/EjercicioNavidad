@@ -12,4 +12,14 @@ public class Visita {
         this.fecha = fecha;
         this.importeFactura = 0.0;
     }
+
+    public void setImporteFinal(double importeBruto) {
+        double descuento = cliente.getDescuento();
+        this.importeFactura = importeBruto * (1 - descuento);
+    }
+
+    @Override
+    public String toString() {
+        return "Fecha: " + fecha + " | " + cliente.toString() + " | Pagado: " + importeFactura + "€";
+    }
 }
