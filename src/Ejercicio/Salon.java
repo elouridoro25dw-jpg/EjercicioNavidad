@@ -72,4 +72,10 @@ public class Salon {
 
         return visitasDelCliente;
     }
+
+    public void mostrarVisitas() {
+        for (int i = 0; i < numVisi; i++) {
+            System.out.println(visitas[i].toString());
+        }
+    }
 }
