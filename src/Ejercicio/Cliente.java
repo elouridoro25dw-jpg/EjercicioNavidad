@@ -21,4 +21,27 @@ public class Cliente {
         this.esSocio = false;
         this.tipoMembresia = "";
     }
+
+    public void getDescuento() {
+        double descuentoFinal;
+        if (esSocio == true) {
+            switch (tipoMembresia) {
+                case "Premium":
+                    descuentoFinal = 0.20;
+                    break;
+                case "Oro":
+                    descuentoFinal = 0.15;
+                    break;
+                case "Platino":
+                    descuentoFinal = 0.10;
+                    break;
+                default:
+                    descuentoFinal = 0.0;
+                    break;
+            }
+        } else {
+            descuentoFinal = 0.0;
+        }
+        System.out.println(descuentoFinal);
+    }
 }
