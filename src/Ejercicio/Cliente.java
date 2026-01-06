@@ -45,6 +45,10 @@ public class Cliente {
         return descuentoFinal;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
     @Override
     public String toString() {
         String textoMembresia = "";

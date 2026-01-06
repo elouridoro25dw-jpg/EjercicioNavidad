@@ -12,4 +12,13 @@ public class Salon {
         this.numClie = 0;
         this.numVisi = 0;
     }
+
+    public Cliente getCliente(String dni) {
+        for (int i = 0; i < numClie; i++) {
+            if (clientes[i].getDni().equals(dni)) {
+                return clientes[i];
+            }
+        }
+        return null;
+    }
 }
