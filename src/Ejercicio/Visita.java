@@ -18,6 +18,10 @@ public class Visita {
         this.importeFactura = importeBruto * (1 - descuento);
     }
 
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+
     @Override
     public String toString() {
         return "Fecha: " + fecha + " | " + cliente.toString() + " | Pagado: " + importeFactura + "€";

@@ -51,4 +51,25 @@ public class Salon {
             visitas[numVisi++] = v;
         }
     }
+
+    public Visita[] getVisitasCliente(String dni) {
+        int cant = 0;
+        for (int i = 0; i < numVisi; i++) {
+            if (visitas[i].getCliente().getDni().equals(dni)) {
+                cant++;
+            }
+        }
+
+        Visita[] visitasDelCliente = new Visita[cant];
+        int indice = 0;
+
+        for (int i = 0; i < numVisi; i++) {
+            if (visitas[i].getCliente().getDni().equals(dni)) {
+                visitasDelCliente[indice] = visitas[i];
+                indice++;
+            }
+        }
+
+        return visitasDelCliente;
+    }
 }
