@@ -42,4 +42,13 @@ public class Salon {
             c.setTipoMembresia(tipo);
         }
     }
+
+    public void anadirVisita(String dni, java.util.Date fecha, double importe) {
+        Cliente c = getCliente(dni);
+        if (c != null && numVisi < visitas.length) {
+            Visita v = new Visita(c, fecha);
+            v.setImporteFinal(importe);
+            visitas[numVisi++] = v;
+        }
+    }
 }
