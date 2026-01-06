@@ -27,4 +27,11 @@ public class Salon {
             clientes[numClie++] = c;
         }
     }
+
+    public void bajaCliente(String dni) {
+        Cliente c = getCliente(dni);
+        if (c != null) {
+            c.setEsSocio(false);
+        }
+    }
 }

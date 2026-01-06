@@ -49,6 +49,10 @@ public class Cliente {
         return dni;
     }
 
+    public void setEsSocio(boolean esSocio) {
+        this.esSocio = esSocio;
+    }
+
     @Override
     public String toString() {
         String textoMembresia = "";
