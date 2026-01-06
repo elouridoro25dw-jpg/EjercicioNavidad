@@ -21,4 +21,10 @@ public class Salon {
         }
         return null;
     }
+
+    public void anadirCliente(Cliente c) {
+        if (numClie < clientes.length) {
+            clientes[numClie++] = c;
+        }
+    }
 }
