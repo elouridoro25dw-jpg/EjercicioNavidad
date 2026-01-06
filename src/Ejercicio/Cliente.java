@@ -53,6 +53,10 @@ public class Cliente {
         this.esSocio = esSocio;
     }
 
+    public void setTipoMembresia(String tipoMembresia) {
+        this.tipoMembresia = tipoMembresia;
+    }
+
     @Override
     public String toString() {
         String textoMembresia = "";

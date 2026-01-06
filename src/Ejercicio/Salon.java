@@ -34,4 +34,12 @@ public class Salon {
             c.setEsSocio(false);
         }
     }
+
+    public void setMembresiaCliente(String dni, String tipo) {
+        Cliente c = getCliente(dni);
+        if (c != null) {
+            c.setEsSocio(true);
+            c.setTipoMembresia(tipo);
+        }
+    }
 }
