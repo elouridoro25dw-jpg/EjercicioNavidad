@@ -22,7 +22,7 @@ public class Cliente {
         this.tipoMembresia = "";
     }
 
-    public void getDescuento() {
+    public double getDescuento() {
         double descuentoFinal;
         if (esSocio == true) {
             switch (tipoMembresia) {
@@ -42,6 +42,16 @@ public class Cliente {
         } else {
             descuentoFinal = 0.0;
         }
-        System.out.println(descuentoFinal);
+        return descuentoFinal;
+    }
+
+    @Override
+    public String toString() {
+        String textoMembresia = "";
+        if (esSocio) {
+            textoMembresia = " - Miembro: " + tipoMembresia;
+        }
+
+        return "Cliente: " + nombre + " (DNI: " + dni + ")" + textoMembresia;
     }
 }
